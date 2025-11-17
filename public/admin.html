@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quản lý món & nước</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+<header class="top">
+  <div class="wrap row">
+    <h1>Quản lý</h1>
+    <a class="btn" href="/">⬅️ Về trang chính</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="panel">
+    <h2>Dấu vết nhóm</h2>
+    <div id="team" class="notice"></div>
+    <div id="meta" class="muted small"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Thêm/Sửa</h2>
+    <form id="form" class="grid2">
+      <input type="hidden" id="id" />
+      <div>
+        <label>Tên *</label>
+        <input type="text" id="name" required />
+      </div>
+      <div>
+        <label>Giá (đ) *</label>
+        <input type="number" id="price" min="0" step="1000" required />
+      </div>
+      <div>
+        <label>Phân loại *</label>
+        <select id="category" required>
+          <option value="food">Món ăn</option>
+          <option value="drink">Nước</option>
+        </select>
+      </div>
+      <div>
+        <label>Ảnh (URL)</label>
+        <input type="text" id="image" placeholder="https://..." />
+      </div>
+      <div style="grid-column:1/-1">
+        <label>Mô tả</label>
+        <textarea id="description" placeholder="Mô tả ngắn"></textarea>
+      </div>
+      <div style="grid-column:1/-1" class="row">
+        <button class="btn primary" type="submit">💾 Lưu</button>
+        <button class="btn" type="reset" id="reset">🧹 Xoá form</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="panel">
+    <h2>Danh sách</h2>
+    <div class="muted small">Bấm ✏️ để sửa, 🗑️ để xoá.</div>
+    <div style="overflow:auto">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:68px">Ảnh</th>
+            <th>Tên</th>
+            <th>Loại</th>
+            <th>Giá</th>
+            <th style="width:120px"></th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script src="/assets/js/admin.js"></script>
+</body>
+</html>

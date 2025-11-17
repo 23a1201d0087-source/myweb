@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Đồ ăn nhanh</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+<header class="top">
+  <div class="wrap row">
+    <h1>🍔 Đồ ăn nhanh</h1>
+    <nav class="row tabs">
+      <button data-cat="all" class="active">Tất cả</button>
+      <button data-cat="food">Món ăn</button>
+      <button data-cat="drink">Nước</button>
+      <a class="btn" href="/admin.html">Quản lý</a>
+    </nav>
+    <input id="q" type="search" placeholder="Tìm món hoặc nước..." />
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="panel">
+    <h2>Thông tin nhóm</h2>
+    <div id="team" class="notice"></div>
+    <div id="meta" class="muted small"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Thực đơn</h2>
+    <div id="grid" class="grid"></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p class="muted small">Dữ liệu lưu tại <code>db/menu.db</code> · Bảng <code>items</code> & <code>team</code>.</p>
+</footer>
+
+<script src="/assets/js/app.js"></script>
+</body>
+</html>

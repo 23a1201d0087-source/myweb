@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhóm 3 Thành Viên</title>
+</head>
+<body>
+  <h2>Danh sách thành viên nhóm</h2>
+  <ul id="members"></ul>
+
+  <script>
+    const team = [
+ 
+      { name: 'Trần Minh Thư', role: '' },
+      { name: 'Đỗ Thị Duyên', role: '' }
+    ];
+
+    // Tách lấy tên và hiển thị lên danh sách <ul>
+    const memberList = document.getElementById('members');
+    team.forEach(member => {
+      const li = document.createElement('li');
+      li.textContent = member.name;
+      memberList.appendChild(li);
+    });
+  </script>
+</body>
+</html>
